@@ -27,7 +27,7 @@ public class Maze
         };
                 
       
-       Gridviewer.view(grid);
+       Viewer.view(grid);
         
         String solution;
         Scanner sc = new Scanner(System.in);
@@ -107,6 +107,6 @@ public class Maze
             System.out.println("MESSAGE 5"); // Did not reach the end.
         }
         
-        GridViewer.view(grid);
+        Viewer.view(grid);
     }
 }
