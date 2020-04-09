@@ -16,13 +16,13 @@ public class Maze
     public static void main(String[] args)
     {
         int[][] grid = {
-            { WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL, WALL},
-            {START, EMPTY,  WALL,  WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, WALL},
+            { EMPTY,  EMPTY,  EMPTY, EMPTY, EMPTY,  EMPTY,  EMPTY,  EMPTY,  EMPTY,EMPTY},
+            {END, EMPTY,  WALL,  WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, WALL},
             { WALL, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, EMPTY,  WALL, WALL},
             { WALL,  WALL,  WALL,  WALL, EMPTY,  WALL, EMPTY,  WALL, EMPTY, WALL},
             { WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL, EMPTY, EMPTY, EMPTY, WALL},
-            { WALL,  WALL, EMPTY,  WALL,  WALL, EMPTY, EMPTY,  WALL, EMPTY, WALL},
-            { WALL,  WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL,  WALL, EMPTY,  END},
+            { WALL,  WALL, WALL,  WALL,  WALL, WALL,WALL,  WALL, WALL, WALL},
+            { WALL,  WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL,  WALL, EMPTY,  START},
             { WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL, WALL},
         };
                 
@@ -80,23 +80,28 @@ public class Maze
             }
             else
             {
-                if(grid[currentRow][currentCol] == EMPTY)
-                {
-                    grid[currentRow][currentCol] = VISITED;
-                }
-                else if(grid[currentRow][currentCol] == WALL)
-                {
-                    done = true;
-                    System.out.println("You stumble blindly into a solid concrete wall"); // Hit wall.
-                }
-                else if(grid[currentRow][currentCol] == END)
-                {
-                    done = true;
-                    solved = true;
-                    System.out.println("SOLVED"); // Solved.
-                }
-                else
-                {} // Do nothing
+		case Maze.EMPTY:
+		grid [currentRow][currentCol] == Maze.VISITED;
+		break;
+		
+	
+		case Maze.WALL:
+		     done == true
+		SYstem.out.println("You tumble blindly to a solid concrete wall")
+		break;
+                
+		
+		case Maze.END:
+		     done = true
+		     solved = true
+		SYstem.out.println("SOLVED!")
+		break;
+
+		default:
+		//Do nothing
+
+
+
             }
             
             charIndex++;
